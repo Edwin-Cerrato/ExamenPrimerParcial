@@ -18,8 +18,59 @@ namespace PrimerExamenLp3
 
         private async void btnCalcular_Click(object sender, EventArgs e)
         {
-            decimal precio1 = Convert.ToInt32(txtPrecioProducto1.Text);
-            decimal precio2 = Convert.ToInt32(txtPrecioProducto2.Text);
+
+            //Uso de ErrorProvider
+            if (string.IsNullOrEmpty(txtProducto1.Text))
+            {
+                errorProvider1.SetError(txtProducto1, "INGRESE EL NOMBRE DEL PRODUCTO");
+                txtProducto1.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+
+            if (string.IsNullOrEmpty(txtCantidad1.Text))
+            {
+                errorProvider1.SetError(txtCantidad1, "INGRESE LA CANTIDAD DEL PRODUCTO");
+                txtCantidad1.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+
+            if (string.IsNullOrEmpty(txtPrecioProducto1.Text))
+            {
+                errorProvider1.SetError(txtPrecioProducto1, "INGRESE LA CANTIDAD DEL PRODUCTO");
+                txtPrecioProducto1.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+
+            //Producto 2
+            if (string.IsNullOrEmpty(txtProducto2.Text))
+            {
+                errorProvider1.SetError(txtProducto2, "INGRESE EL NOMBRE DEL PRODUCTO");
+                txtProducto2.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+
+            if (string.IsNullOrEmpty(txtCantidad2.Text))
+            {
+                errorProvider1.SetError(txtCantidad2, "INGRESE LA CANTIDAD DEL PRODUCTO");
+                txtCantidad2.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+
+            if (string.IsNullOrEmpty(txtPrecioProducto2.Text))
+            {
+                errorProvider1.SetError(txtPrecioProducto2, "INGRESE LA CANTIDAD DEL PRODUCTO");
+                txtPrecioProducto2.Focus();
+                return;
+            }
+            errorProvider1.Clear();
+
+            decimal precio1 = Convert.ToDecimal(txtPrecioProducto1.Text);
+            decimal precio2 = Convert.ToDecimal(txtPrecioProducto2.Text);
 
             int cantidad1 = Convert.ToInt32(txtCantidad1.Text);
             int cantidad2 = Convert.ToInt32(txtCantidad2.Text);
@@ -58,9 +109,23 @@ namespace PrimerExamenLp3
 
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void Limpiar()
         {
+            txtProducto1.Clear();
+            txtProducto2.Clear();
+            txtCantidad1.Clear();
+            txtCantidad2.Clear();
+            txtPrecioProducto1.Clear();
+            txtPrecioProducto2.Clear();
 
+            txtNeto.Clear();
+            txtDescuento.Clear();
+            txtTotalPagar.Clear();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }

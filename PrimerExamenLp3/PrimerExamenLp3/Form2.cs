@@ -12,23 +12,19 @@ namespace PrimerExamenLp3
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            //definicion e inicializacion de Capital
+            //Declaración e inicializacion de Variables
             float capital = 200000;
             float interesMensual = 0;
 
 
             for (int i = 1; i < 13; i++)
             {
+                //Calculo de interes ganado por mes
                 interesMensual = (float)(capital * 0.015 * i);
-
                 capital += interesMensual;
 
-                //listBox.Items.Add("MES " + i + "   " + capital);
-
-                listBox.Items.Add("MES " + i + "INTERES OBTENIDO " + interesMensual + "TOTAL ACUMULADO" + capital);
-
+                listBox.Items.Add(" MES " + " " + i + " " + "INTERES OBTENIDO " + " " + interesMensual + " " + "TOTAL ACUMULADO" + " " + " " + capital);
             }
-
 
 
         }

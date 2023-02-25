@@ -59,9 +59,9 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(331, 118);
+            this.button3.Location = new System.Drawing.Point(315, 118);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(128, 51);
+            this.button3.Size = new System.Drawing.Size(123, 51);
             this.button3.TabIndex = 2;
             this.button3.Text = "EJERCICIO 3";
             this.button3.UseVisualStyleBackColor = true;
