@@ -11,10 +11,6 @@ namespace PrimerExamenLp3
             InitializeComponent();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private async void btnCalcular_Click(object sender, EventArgs e)
         {
@@ -88,12 +84,13 @@ namespace PrimerExamenLp3
         //FUNCIÓN ASINCRONA
         private async Task<decimal> TotalAPagarAsync(decimal pre1, decimal pre2, int cant1, int cant2)
         {
+            //Definción de Variables
             float total = 0;
             float totalDescuento = 0;
             float tot1 = 0;
             decimal TotalPagar = (decimal)await Task.Run(() =>
             {
-
+                //Calculo
                 total = (float)((pre1 * cant1) + (pre2 * cant2));
                 totalDescuento = (float)(total * 0.15);
                 tot1 = total - totalDescuento;
